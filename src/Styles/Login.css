@@ -1,0 +1,132 @@
+
+  .login{
+    background-color: #fff ;
+    color: rgb(14, 15, 15);
+  width: 330px;
+	height: 400px;
+	margin: auto;
+	display: block;
+	border-radius: 1.5em;
+	box-shadow: 0px 11px 35px 2px  rgb(110, 34, 59);
+}
+.login-signup{
+    height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.sign {
+	padding-top: 20px;
+	color: rgb(124, 57, 80);
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+	font-size: 23px;
+}
+.un{
+width: 76%;
+	color: rgb(38, 50, 56);
+	font-weight: 700;
+	font-size: 14px;
+	letter-spacing: 1px;
+	background: rgba(236, 164, 164, 0.04);
+	padding: 10px 10px;
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	box-sizing: border-box;
+	border: 2px solid  rgb(214, 140, 165);
+	margin-bottom: 20px;
+	text-align: center;
+	margin-bottom: 27px;
+	font-family: 'Ubuntu', sans-serif;
+  margin-left: 10px;
+}
+.login-form{
+	text-align: center;
+	height: 350px;
+	width: 80%;
+    margin-left: 25px;
+}
+
+.pass {
+	width: 76%;
+	color: rgb(38, 50, 56);
+	font-weight: 700;
+	font-size: 14px;
+	letter-spacing: 1px;
+	background: rgba(136, 126, 126, 0.04);
+	padding: 10px 20px;
+	border: none;
+	border-radius: 500px;
+	outline: none;
+	box-sizing: border-box;
+	border: 2px solid  rgb(212, 145, 167);
+	margin-bottom: 20px;
+	
+  margin-left: 10px;
+	text-align: center;
+	margin-bottom: 27px;
+	font-family: 'Ubuntu', sans-serif;
+}
+.let
+{
+  padding:10px;
+}
+
+.un:focus,
+.pass:focus,.otpInput:focus{
+	border: 2px solid rgba(197, 175, 175, 0.18) !important;
+
+}
+
+.submit {
+	display: block;
+	text-align: center;
+	margin: auto;
+	cursor: pointer;
+	border-radius: 5em;
+	color: #f5eaea;
+	/* background: linear-gradient(to right, #7e0b4163, rgb(100, 100, 228)); */
+	width: 100px;
+	height: 40px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 20px;
+	box-shadow: 0 0 20px 1px rgba(218, 206, 206, 0.04);
+  background-color:  rgb(92, 5, 31);
+}
+
+.forgot {
+	text-shadow: 0px 0px 3px rgba(63, 59, 59, 0.12);
+	color: #6ba594;
+	padding-top: 15px;
+}
+
+a {
+	/* text-shadow: 0px 0px 1px  rgb(216, 136, 162); */
+	color: #700e3c;
+	text-decoration: none
+}
+
+/* label{
+	margin-top: 20px;
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+	color: #4d0909;
+	font-size: 20px;
+} */
+.otpInput
+{
+	border-radius: 20px;
+	background: rgba(236, 164, 164, 0.04);
+	box-sizing: border-box;
+	border: 2px solid  rgb(214, 140, 165);
+	margin-bottom: 20px;
+	width: 40px;
+  height: 40px;
+  margin: 5px;
+  text-align: center;
+  font-size: 1.2em;
+
+}

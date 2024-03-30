@@ -1,0 +1,149 @@
+#admin_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: #E0E0E0;
+    z-index: 100;
+    /* margin-left: 150px; */
+  }
+  .adminhead
+  {
+    margin: 0%;
+    width: 120%;
+    
+  }
+ 
+  .admin_navbar-brand {
+    order: -1; /* Move to the start */
+  }
+ 
+  .adminform{
+    flex-grow: 1; /* Grow to fill available space */
+  }
+  .adminformcontrol{
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-bottom: 1%;
+    width: 50%;
+ 
+   
+  }
+ 
+  .admin_navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+  }
+ 
+  .admin_nav-item {
+    margin-left: 30px; /* Adjust spacing between icons */
+  }
+ 
+  .admin_nav-link {
+    color: black; /* Adjust color as needed */
+    text-decoration: none; /* Remove underlines */
+   
+  }
+ 
+  .admin_nav-link:hover {
+    color: gray; /* Adjust hover color as needed */
+   
+  }
+ 
+ 
+.admin_left{
+  width: 15%;
+  height: 100%;
+  background: #322f2f;
+    /* white-space: nowrap;  */
+    transition: width 0.5s ;
+    position:fixed;
+    z-index: 100;
+    margin-top: 6%;
+    margin-left: 2px;
+}
+  .admin_left ul{
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+  }
+  .admin_left li {
+    width: auto;
+    height: 60px;
+    line-height: 50px;  
+    padding-left: 15px;
+  }
+  .admin_left li:hover {
+    background: rgb(155, 150, 150);
+    color: black;
+  }
+ 
+  .left:hover {
+        width: 250px;
+    }  
+ 
+    .admin_left .item-menu {
+          height:50px;
+          overflow:hidden;
+          color:#fff;
+          
+      }  
+  .admin_left a{
+    color: white;
+      text-decoration: none;
+      font-weight: bold;
+  }
+  span.menu{
+    padding-left: 17px;
+  }
+  .t_search {
+      color: black;
+      height: 35px;
+      margin-left: 15px;
+      width: 190px
+  }
+ 
+    .example-spacer {
+        flex: 1 1 auto;
+      }
+     
+      .mat-mdc-form-field {
+        font-size: 14px;
+        width: 10%;
+       
+      }
+ 
+      #side{
+        margin-top: 0px;
+      }
+      .img{
+        width:0;
+      }
+    .admincontainer
+    {
+      width: 50px;
+      margin-left: 1px;
+      padding: 0%;
+    }
+    /* .form-horizontal{
+      height: 100vh;
+      margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+  .start-auction button{
+      border-radius: 30px;
+      width: 200px;
+      height: 50px;
+  }
+
+  .create{
+    margin-top: 100px;
+  }
+  

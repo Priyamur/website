@@ -1,0 +1,178 @@
+
+  .Adminadd {
+    max-width: 100px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    margin-top: 80px;
+  }
+  h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  select {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: auto;
+    outline: 0;
+    padding: 8px;
+    width: 100%;
+    background-color: #e2e8e9;
+    color: black;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+
+  }
+  .dropdown{
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: auto;
+    outline: 0;
+    padding: 8px;
+    width: 100%;
+    background-color: #e2e8e9;
+    color: black;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"]
+  
+  {
+    margin: 0 4px 8px 0;
+  }
+  
+  select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+  }
+  
+  /* button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 10px;
+  } */
+  
+  fieldset {
+    margin-bottom: 30px;
+    border: none;
+  }
+  button{
+    color: #fff;
+    background-color: rgb(110, 34, 59);
+    border: 3px, solid rgb(110, 34, 59);
+    border-radius: 65px;
+   
+  }
+  .bookin{
+    margin-left: 100px;
+    margin-top:0px;
+  }
+  .book{
+    color: #fff;
+  }
+  
+  legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  label.light {
+    font-weight: 300;
+    display: inline;
+  }
+  
+  .number {
+    background-color: rgb(110, 34, 59);
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 100%;
+  }
+    
+
+.table-wrapper {
+  height: fit-content;
+  color: dark-secondary;
+  background: linear-gradient(0deg, #8e9eab 10%, #eef2f3 90%); 
+  font-family: 'Open Sans', sans-serif;
+  padding: 50px;
+  /* position: relative; */
+  /* overflow: hidden; */
+  
+  margin:100px;
+  margin-left: 230px;
+  width:1050px;
+  
+ 
+ 
+}
+.pricing-table {
+  margin: 10px 0 20px 0;
+  text-align: center;
+  font-size: 12px;
+  /* overflow: hidden; */
+  border-radius: 5px;
+  th, td {
+    padding: 15px 15px;
+   
+    border: none;
+    text-align: center;
+    background: neutral;
+  }
+  th {
+    background: main; 
+    color: light-intense; 
+  }
+  td:first-child {
+    font-weight: bold;
+    text-align: left;
+  }
+  tr:nth-child(even) td {
+    background: lighten( neutral, 12% ) ;
+  }
+}
+.Appointform{
+  margin-left: 450px;
+  margin-right: 450px;
+}
+ 

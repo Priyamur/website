@@ -50,7 +50,6 @@ describe('AdminDisplay Component', () => {
     render( <Router>
         <AdminDisplay />
     </Router>);
-
   });
 
   test('navigates to Updatedisplay component when "Update" button is clicked', async () => {

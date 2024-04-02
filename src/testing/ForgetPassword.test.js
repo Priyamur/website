@@ -35,6 +35,7 @@ describe('ForgetPassword component', () => {
       expect(axios.post).toHaveBeenCalledWith('http://localhost:5151/api/LoginSignup/forgotpassword?email=validemail@example.com');
     
     });
+    
   });
 
   test('handles server error', async () => {

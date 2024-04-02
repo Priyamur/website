@@ -64,7 +64,6 @@ describe('Appointment component', () => {
          <Appointment />
     </Router>
    );
-   
   });
 
 });

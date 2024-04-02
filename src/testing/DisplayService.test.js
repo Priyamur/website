@@ -41,7 +41,6 @@ describe('DiplayService component', () => {
     
     // Add more expectations for product details as needed
   });
-
   it('renders search input correctly', () => {
     render(
       <Router>

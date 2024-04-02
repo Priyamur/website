@@ -43,8 +43,7 @@ describe('Signup component', () =>{
 
         fireEvent.change(screen.getByPlaceholderText('Enter confirm password'), {
             target: { value: 'confirm password' },
-        });
-       
+        });  
     });
     it('displays error message for empty fields', async () => {
         render(

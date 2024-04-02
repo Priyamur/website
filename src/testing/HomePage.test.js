@@ -43,4 +43,5 @@ describe('Homepage component', () => {
     expect(screen.getByTestId('Book Now')).toBeInTheDocument();
     expect(screen.getByText('Send')).toBeInTheDocument();
   });
+  
 });

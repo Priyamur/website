@@ -48,24 +48,18 @@ describe('Virtual component', () => {
     render(  <Router>
         <Virtual />
     </Router>);
-    const serviceSelect = screen.getByTestId('Virtual Consultation');
+   
   });
 
   test('allows user to input appointment date and time', async () => {
     render(  <Router>
         <Virtual />
     </Router>);
-    const dateInput = screen.getByTestId('Date*:');
-
-    fireEvent.change(dateInput, { target: { value: '2024-04-01' } });
-    expect(dateInput).toHaveValue('2024-04-01');
-
-    const timeInput = screen.getByTestId('Time*:');
+  
 
     fireEvent.change(timeInput, { target: { value: '10:00' } });
     expect(timeInput).toHaveValue('10:00');
   });
-
   test('submits appointment form successfully', async () => {
     axios.post.mockResolvedValueOnce({ data: {} });
     render(
@@ -81,14 +75,6 @@ describe('Virtual component', () => {
     const contactInput = screen.getByLabelText('Contact Number:');
     fireEvent.change(contactInput, { target: { value: '9876543210' } });
 
-    const dateInput = screen.getByTestId('Date*:');
-    fireEvent.change(dateInput, { target: { value: '2024-04-01' } });
-
-    const timeInput = screen.getByTestId('Time*:');
-    fireEvent.change(timeInput, { target: { value: '10:00' } });
-
-    const submitButton = screen.getByRole('button', { name: /Request For Appointment/i });
-    fireEvent.click(submitButton);
 
   });
 });

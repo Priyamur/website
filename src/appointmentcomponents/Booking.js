@@ -15,7 +15,22 @@ export default function Booking() {
 
     const userId = localStorage.getItem('user');
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        let newValue = value;
+    
+        // Validate mobile number
+        if (name === "phoneNumber") {
+            // Allow only digits and limit to 10 characters
+            newValue = value.replace(/\D/g, '').slice(0, 10);
+        }
+    
+        // Validate age
+        if (name === "clientAge") {
+            // Allow only digits and limit to 2 characters
+            newValue = value.replace(/\D/g, '').slice(0, 2);
+        }
+    
+        setFormData({ ...formData, [name]: newValue });
     };
 
     console.log("booking", userId);
@@ -26,7 +41,7 @@ export default function Booking() {
             const response = await axios.post(`http://localhost:5151/api/Appointments?name=${formData.name}&date=${formData.date}&time=${formData.time}&phoneNumber=${formData.phoneNumber}&clientAge=${formData.clientAge}&clientId=${userId}&serviceId=${formData.serviceId}`
 
             );
-            window.alert(" Appointment booked successfully");
+            window.alert(" Appointment booked successfully further confirmation has been sent to your mail");
             navigate('/Display');
             console.log("booking created successfully:", response.data);
         } catch (error) {
@@ -145,13 +160,13 @@ export default function Booking() {
                                 <tr key={appointment.id}>
                                     <td>{appointment.date}</td>
                                     <td>{appointment.time}</td>
-                                    <td><button onClick={() => postBooking(appointment.id,appointment.date,appointment.time)} >Book</button></td>
+                                    <td><button onClick={() => postBooking(appointment.id,appointment.date,appointment.time)} style={{background:'rgb(163, 13, 58)'}} className='bok'> <a className="booki">Book</a></button></td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </fieldset>
-                <button type="submit" className='bookin'>Request For Appointment</button>
+               
             </form>
         </div>
 

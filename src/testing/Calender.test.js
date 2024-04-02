@@ -26,7 +26,6 @@ describe('AppointmentsCalendar component', () => {
   test('handles error gracefully', async () => {
     axios.get.mockRejectedValue(new Error('Fetch failed'));
     render(<AppointmentsCalendar />);
-  
   });
 
   test('button is clickable', async () => {

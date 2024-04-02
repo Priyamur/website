@@ -17,6 +17,7 @@ import Customer from './components/Appointmentcomponents/Customercomponents/Cust
 import AdminDisplay from './servicecomponents/AdminDisplay';
 import Updatedisplay from './servicecomponents/Updatedisplay';
 import Calender from '../src/appointmentcomponents/Calender';
+// import History from '../src/appointmentcomponents/BookingHistory';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
               <Route path='/AdminDisplay' element={<AdminDisplay />} />
               <Route path='/Updatedisplay/:sid' element={<Updatedisplay />} />
               <Route path='/Calender' element={<Calender/>} />
+              {/* <Route path='/History' element={<BookingHistory/>} /> */}
 
             </Routes>
           </div>

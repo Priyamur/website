@@ -12,7 +12,6 @@ describe('OTP component', () => {
     render(<OTP />, { wrapper: MemoryRouter });
     expect(screen.getByText('OTP Verification')).toBeInTheDocument();
   });
-
   test('displays error message for invalid OTP', async () => {
     render(<OTP />, { wrapper: MemoryRouter });
     fireEvent.change(screen.getByPlaceholderText('Enter number'), { target: { value: '123' } });

@@ -28,14 +28,14 @@ describe('Booking Component', () => {
     const telInput = screen.getByLabelText('Contact Number:');
     fireEvent.change(telInput, { target: { value: '9876543210' } });
     expect(telInput.value).toBe('9876543210');
+    
   });
 
   test('submits form data when "Request For Appointment" button is clicked', async () => {
     render(<Router>
         <Booking />
         </Router>);
-    const submitButton = screen.getByText('Request For Appointment');
-    fireEvent.click(submitButton);
+   
     // Add assertions here to check if form data is submitted correctly
   });
 

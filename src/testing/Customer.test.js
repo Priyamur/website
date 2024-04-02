@@ -25,7 +25,6 @@ describe('Customer component', () => {
     axios.get.mockResolvedValueOnce({ data: mockAppointments });
 
     render(<Customer />);
-
     expect(await screen.findByText('John Doe')).toBeInTheDocument();
     expect(screen.getByText('Jane Doe')).toBeInTheDocument();
     // Add more assertions for other customer details

@@ -10,7 +10,7 @@ export default function Appointment() {
     const [appointments, setAppointments] = useState([]);
     const [clientemail, setClientemail] = useState('');
     const [servicename, setServiceName] = useState('');
-   
+
 
 
     const [selectedappointment, setSelectedAppointments] = useState(null);
@@ -21,20 +21,20 @@ export default function Appointment() {
     const fetchServices = async () => {
         try {
             const response = await axios.get('http://localhost:5151/api/Appointments');
-
-            setAppointments(response.data)
-            for (const appointment of response.data) {
+            const updatedAppointments = await Promise.all(response.data.map(async appointment => {
                 const clientId = appointment.clientId;
                 const serviceId = appointment.serviceId;
                 const clientResponse = await axios.get(`http://localhost:5151/api/LoginSignup/${clientId}`);
                 const serviceResponse = await axios.get(`http://localhost:5151/api/Backend/GetById/${serviceId}`);
-                setClientemail(clientResponse.data.email);
-                setServiceName(serviceResponse.data.serviceName);
-            }
-
+                return {
+                    ...appointment,
+                    clientemail: clientResponse.data.email,
+                    servicename: serviceResponse.data.serviceName
+                };
+            }));
+            setAppointments(updatedAppointments);
         } catch (error) {
-            console.error('Error fetching :', appointments.appointmentId, error);
-
+            console.error('Error fetching:', error);
         }
     };
 
@@ -147,24 +147,23 @@ export default function Appointment() {
                             </tr>
                         </thead>
                         <tbody className="text-center">
-                            {appointments.map((appointment, i) => (<tr
-                                key={appointment.appointmentId}>
-                                <td>{appointment.name}</td>
-                                <td>{appointment.clientAge}</td>
-                                <td>{appointment.date}</td>
-                                <td>{appointment.time}</td>
-                                <td>{appointment.phoneNumber}</td>
-                                <td>{clientemail}</td>
-                                <td>{servicename}</td>
-
-                                <td>
-                                    <button className="btn btn-sm" onClick={() => handleConfirmation(clientemail)} data-testid='Confirm'>Confirm</button>
-                                </td>
-                                <td>
-                                    <button className="btn btn-sm" onClick={() => handleCancellation(clientemail, appointment.appointmentId)} data-testid="Cancel">Cancel</button>
-                                </td>
-                            </tr>))}
-
+                            {appointments.map((appointment, i) => (
+                                <tr key={appointment.appointmentId}>
+                                    <td>{appointment.name}</td>
+                                    <td>{appointment.clientAge}</td>
+                                    <td>{appointment.date}</td>
+                                    <td>{appointment.time}</td>
+                                    <td>{appointment.phoneNumber}</td>
+                                    <td>{appointment.clientemail}</td>
+                                    <td>{appointment.servicename}</td>
+                                    <td>
+                                        <button className="btn btn-sm" onClick={() => handleConfirmation(appointment.clientemail)} data-testid='Confirm' >Confirm</button>
+                                    </td>
+                                    <td>
+                                        <button className="btn btn-sm" onClick={() => handleCancellation(appointment.clientemail, appointment.appointmentId)} data-testid="Cancel">Cancel</button>
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
 
                     </table>
